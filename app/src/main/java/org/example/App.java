@@ -1,6 +1,3 @@
-/*
- * This should be your main class where all your objects will be created
- */
 package org.example;
 
 public class App {
@@ -9,9 +6,9 @@ public class App {
         Library library = new Library();
 
         // Add books to library
-        library.addBook(new Book("1984", "George Orwell"));
-        library.addBook(new Book("To Kill a Mockingbird", "Harper Lee"));
-        library.addBook(new Book("The Great Gatsby", "F. Scott Fitzgerald"));
+        library.addBook(new Book("1984", "George Orwell", 1949));
+        library.addBook(new Book("To Kill a Mockingbird", "Harper Lee", 1960));
+        library.addBook(new Book("The Great Gatsby", "F. Scott Fitzgerald", 1925));
 
         // Create patrons
         Patron patron1 = new Patron("Alice", 1);
@@ -24,7 +21,7 @@ public class App {
         // List books in the library
         System.out.println("\nBooks in the library:");
         for (Book book : library.listBooks()) {
-            System.out.println(book.getTitle() + " by " + book.getAuthor() + " (Borrowed: " + book.isBorrowed() + ")");
+            System.out.println(book.title() + " by " + book.author() + " (Published: " + book.yearPublished() + ")");
         }
 
         // Return a book
@@ -33,7 +30,7 @@ public class App {
         // List books again
         System.out.println("\nBooks in the library:");
         for (Book book : library.listBooks()) {
-            System.out.println(book.getTitle() + " by " + book.getAuthor() + " (Borrowed: " + book.isBorrowed() + ")");
+            System.out.println(book.title() + " by " + book.author() + " (Published: " + book.yearPublished() + ")");
         }
     }
 }
