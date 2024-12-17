@@ -1,15 +1,15 @@
+// Book class
+package org.example;
+
 public class Book {
-
-    // This is your working class.
-
     private String title;
     private String author;
-    private boolean isBorrowed;
+    private boolean borrowed;
 
     public Book(String title, String author) {
         this.title = title;
         this.author = author;
-        this.isBorrowed = false;
+        this.borrowed = false;
     }
 
     public String getTitle() {
@@ -21,12 +21,14 @@ public class Book {
     }
 
     public boolean isBorrowed() {
-        return isBorrowed;
+        return borrowed;
     }
 
-    public void setBorrowed(boolean isBorrowed) {
-        this.isBorrowed = isBorrowed;
-
+    public void borrow() {
+        borrowed = true;
     }
-    
+
+    public void returnBook() {
+        borrowed = false;
+    }
 }
