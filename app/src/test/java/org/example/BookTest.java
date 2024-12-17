@@ -8,8 +8,10 @@ import org.junit.jupiter.api.Test;
 
 class BookTest {
     @Test void testBookConstructor() {
+        // Creating a book record
         Book book = new Book("1984", "George Orwell", 1949);
-    
+        
+        // Using the implicitly created methods from the record
         assertEquals("1984", book.title());
         assertEquals("George Orwell", book.author());
         assertEquals(1949, book.yearPublished());
