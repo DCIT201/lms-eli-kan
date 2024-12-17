@@ -1,34 +1,9 @@
-// Book class
-package org.example;
+package org.example
 
-public class Book {
-    private String title;
-    private String author;
-    private boolean borrowed;
 
-    public Book(String title, String author) {
-        this.title = title;
-        this.author = author;
-        this.borrowed = false;
-    }
+public record Book(String title. String author, int yearPublished){
 
-    public String getTitle() {
-        return title;
-    }
 
-    public String getAuthor() {
-        return author;
-    }
 
-    public boolean isBorrowed() {
-        return borrowed;
-    }
-
-    public void borrow() {
-        borrowed = true;
-    }
-
-    public void returnBook() {
-        borrowed = false;
-    }
+    
 }
